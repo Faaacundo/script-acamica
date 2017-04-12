@@ -1,84 +1,230 @@
-html{
+*{
   padding:0;
   margin:0;
-  box-sizing:border-box;
+  box-sizing: border-box;
+}
+html{
   font-size: 14px;
 }
-
-.btnCrearSecciones {
-    color: #fff;
-    background-color: #f0ad4e;
-    border-color: #eea236;
-}
-.btnAgregarComentario{
-    color: #fff;
-    background-color: #f0ad4e;
-    border-color: #eea236;
+body{
+  font-family: 'Roboto', sans-serif;
+background-color: rgba(200,200,200,.8);
 }
 
-li{
-  font-size:.8rem;
-}
+/*-----------  M E N U  -----------*/
+nav{
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  background:#333;
+  color:#fff;
 
-.seccion{
-width: 30%;
-min-width: 20rem;
-background-color: red;
-height:auto;
-margin: 2rem 2rem;
-padding: .5rem;
-float:left;
 }
-/*----------------------*/
+nav h2{
+  text-align:center;
+  margin:0;
+  padding:10px;
+  background:#2a2a2a;
+}
+nav .opciones{
+  list-style:none;
+  padding:0;
+  margin:0;
+    transition: all 3s;
+}
+#menuToggle{
+  cursor:pointer;
+  margin:5px;
+
+}
+.abrir{
+  transform: translateX(250px);
+}
+.cuerpo{
+  background:#eee;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+    transition: all 1s cubic-bezier(.89,.14,.42,1.03);
+}
 
 input[type="text"]{
-    background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-    border-radius: 4px 4px 4px 4px;
+  width:100%;
+  margin:5px 0;
+    background-color: #1c1c1c;
+    border:none;
+    outline:none;
     color: #555555;
-    display: inline-block;
-    font-size: 14px;
-    height: 20px;
-    line-height: 20px;
+    display: block;
+    font-size: 16px;
+    height: 50px;
+    line-height: 25px;
     margin-bottom: 10px;
-    padding: 4px 6px;
-    vertical-align: middle;
+    padding:0 6px;
+      box-shadow:inset 0 .5px .5px black;
 }
 input[type="text"]:focus {
     border-color: rgba(82, 168, 236, 0.8);
     outline: 0 none;
-    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.1);
-    -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.1);
-    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,1);
+    -webkit-box-shadow:inset -1px .9px 7px black;
+    -moz-bbox-shadow:inset -1px .9px 7px black;
+    box-shadow:inset -1px .9px 7px black;
 }
-a {
-    text-decoration: none;
+hr{
+  opacity: .08;
 }
-.btn {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-image: none;
-    border-radius: 4px 4px 4px 4px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 0;
-    padding: 4px 12px;
-    text-align: center;
-    vertical-align: middle;
+.titulo{
+  margin-top:5px;
+  text-align: center;
+  font-size:1.15em;
+  text-transform: uppercase;
+  font-weight:400;
+  width: 100%;
+  height: auto;
+  letter-spacing: .35em;
+}
+.btn{
+  text-transform: uppercase;
+  text-size:1.2em;
+  margin:5px 0;
+  border: 1px solid rgba(22,22,22,1);
+  width:100%;
+  height: 35px;
+  outline:none;
+  text-decoration-style: none;
+  text-align: center;
+  padding-top: 8px;
+  background: rgba(51,51,51,1);
+background: -moz-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(33,33,33,1) 100%);
+background: -webkit-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(33,33,33,1) 100%);
+background: -o-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(33,33,33,1) 100%);
+background: -ms-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(33,33,33,1) 100%);
+background: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(33,33,33,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#212121', GradientType=0 );
 }
 
-#contenedor {
-    margin-top: 15px;
+.btn:hover{
+  background:rgba(33,33,33,1);
 }
+.btn:active{
+  margin:5px 0;
+  border: 1px solid rgba(22,22,22,1);
+  width:100%;
+  height: 35px;
+  outline:none;
+  text-decoration-style: none;
+  background: rgba(22,22,22,1);
+background: -webkit-linear-gradient(rgba(22,22,22,1) 0%, rgba(38,38,38,1) 100%);
+background: -o-linear-gradient(rgba(22,22,22,1) 0%, rgba(38,38,38,1) 100%);
+background: linear-gradient(rgba(22,22,22,1) 0%, rgba(38,38,38,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454545', endColorstr='#262626', GradientType=0 );
+  }
 .eliminar {
-    margin: 5px;
+  margin: 5px;
+  top:0;
+  right:0;
+}
+.modal{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+#contenedor {
+ margin:2% 10%;
+}
+#contenedor div{
+  top:5%;
+  margin:5px;
+  float:left;
+  padding:5px;
+  width: 30%;
+  height: auto;
+  background-color: #333;
+}
+/*asdasdsadasd*/
+
+
+
+
+
+/**Mobile (Hamburger-)Menu from here on**/
+
+/** This is kind of a styled trigger here **/
+#menuToggle
+{
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+#menuToggle input
+{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #3cc3e7;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.2s  cubic-bezier(0.77,0.2,0.05,1.0),
+
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #3cc3e7;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg)
+      scale(0.2, .2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menuToggle input:checked ~ ul
+{
+    transform: scale(1.0, 1.0);
+    opacity: 1;
 }

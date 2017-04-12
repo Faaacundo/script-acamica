@@ -43,5 +43,9 @@ $(document).ready(function() {
         return false;
     });
 
+    $('#menuToggle').on('click', function(){
+      $('.cuerpo').toggleClass('abrir');
+      $('.cuerpo #modal').toggleClass('modal');
+    });
 
 });
