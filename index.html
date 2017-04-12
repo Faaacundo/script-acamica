@@ -27,13 +27,15 @@
   <div class="opciones">
   <hr>
     <p class="titulo">crea tu sección</p>
-      <input type="text" id="input" name="inputt" placeholder="Ingresa el nombre de la sección">
+      <input type="text" id="inputSec" name="inputt" onkeypress="return event.keyCode!=32" placeholder="Ingresa el nombre de la sección"> <!-- onkeypress="return event.keyCode!=32" no deja que se inserte el espacio en el input-->
       <div id="agregarCampo" class="btn" href="#">Agregar Sección</div>
+  <hr>
+    <p class="titulo">agrega contenido</p>
+      <input type="text" id="inputCont" name="inputt" placeholder="Ingresa el contenido"> <!-- onkeypress="return event.keyCode!=32" no deja que se inserte el espacio en el input-->
+      <div id="agregarContenido" class="btn" href="#">Agregar Contenido</div>
   <hr>
   </div>
 </nav>
-
-
 
 
 
