@@ -98,7 +98,6 @@ input[type="text"]:focus {
 }
 .btn{
   text-transform: uppercase;
-  text-size:1.2em;
   margin:5px 0;
   border: 1px solid rgba(52,52,52,.2);
   width:100%;
@@ -136,9 +135,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#939393', end
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#939393', endColorstr='#212121', GradientType=0 );
   }
 .eliminar {
-  margin: 5px;
-  top:0;
-  right:0;
 }
 .modal{
   width: 100%;
@@ -160,10 +156,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#939393', end
   height: auto;
   background-color: white;
   box-shadow: .5px 3px 5px rgba(0,0,0,.5);
+    border-radius: 2px;
 }
+#contenedor div a{
+  top: 0;
+  right: 0;
+  position: relative;
+}
+#contenedor div ul li{
+    z-index: 99;
+}
+
 /*asdasdsadasd*/
 
-
+a{
+    text-decoration:none;
+    color:black;
+    text-decoration-style: none;
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
 
 
 

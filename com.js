@@ -13,6 +13,7 @@ $(document).ready(function() {
 
               var val   = $("#inputSec").val(); // Toma el valor del Input
 
+
           if(val==""){ // si el Input no tiene nada
               alert("Por favor ponle nombre a la sección que vas a crear");
               $('#inputSec').focus();
@@ -24,21 +25,19 @@ $(document).ready(function() {
               } else{
                   conteo++;
                   //agregar campo
-                  $(contenedor).append('<div id="'+ val +'" class="seccion-'+ conteo +'" placeholder="Texto '+ conteo +'"><ul> AS</ul><a href="#" class="eliminar">&times;</a></div>');
-                  $('.btnAgregarComentario').click(function( event ) {
+                  $(contenedor).append('<div id="'+ val +'" class="seccion-'+ conteo +'"><h3>'+val+'</h3><hr><ul></ul><a href="#" class="eliminar">&times;</a></div>');
+                  $('#agregarContenido').click(function( event ) {
+                                    var cont  = $("#inputCont").val();
                     //CREA UN LI ADENTRO DEL UL DE LA SECCIÓN QUE HEMOS CREADO
-                    $('#contenedor div ul').append('<li>¡Felicidades! Has insertado un nuevo DIV en el BODY</li>')
+                    $('#contenedor div ul').append("<li>"+cont+"</li>");
                   });
               };
           };
           x++; //Incrementa el numero
         };
     });
-      var contenido  = $("#inputCont").val();
-
-    $("#agregarContenido").on('click', function(){
-      $("div ul").append("<li>"+ contenido +"</li>");
-    });
+    
+    
 
 //  ELIMINAR SECCIÓN ******************************************
     $("#contenedor").on("click",".eliminar", function(e){ //Click en eliminar campo
